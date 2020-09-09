@@ -1,0 +1,146 @@
+<form class="form" #AddSPCCForm = "ngForm" (submit) = "AddSPCC(AddSPCCForm)" style="padding: 10px;">
+    <h4>Shot Peening & Colour Coding</h4>
+    <div class="row">
+        <div class="col-md-10">
+        <div class="form-group">
+            <label for="Customer">Customer</label>
+            <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer"><br>
+        </div>
+    </div>
+
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No.</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No."><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAProcess">Process (Mubea, Attendorn)</label>
+                <input type="text" ngModel #MAProcess = "ngModel" name="MAProcess" class="form-control" placeholder="process"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="GrainSize">Grain Size</label>
+                <input type="text" ngModel #GrainSize = "ngModel" name="GrainSize" class="form-control" placeholder="Grain Size"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAHPSNo">HPS No.</label>
+                <input type="text" ngModel #MAHPSNo = "ngModel" name="MAHPSNo" class="form-control" placeholder="HPS No."><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="RevolverL1">L1 Revolver</label>
+                <input type="text" ngModel #RevolverL1 = "ngModel" name="RevolverL1" class="form-control" placeholder="L1 Revolver"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="RevolverFi">ø Revolver</label>
+                <input type="text" ngModel #RevolverFi = "ngModel" name="RevolverFi" class="form-control" placeholder="ø Revolver"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Color">Color</label>
+                <input type="text" ngModel #Color = "ngModel" name="Color" class="form-control" placeholder="color"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">Spinks Impex India</h4>
+    <h5 style="text-align: center;">Dimension Cliche Plate</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenClichePlateDimen">Dimensions</label>
+                <input type="text" ngModel #SIIDimenClichePlateDimen = "ngModel" name="SIIDimenClichePlateDimen" class="form-control" placeholder="Dimensions"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenClichePlateQuant">Quantity</label>
+                <input type="text" ngModel #SIIDimenClichePlateQuant = "ngModel" name="SIIDimenClichePlateQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <h5 style="text-align: center;">Dimension Tampon Side</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenTamponSideSide">Side</label>
+                <input type="text" ngModel #SIIDimenTamponSideSide = "ngModel" name="SIIDimenTamponSideSide" class="form-control" placeholder="Side"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenTamponSideSideQuant">Quantity</label>
+                <input type="text" ngModel #SIIDimenTamponSideSideQuant = "ngModel" name="SIIDimenTamponSideSideQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenTamponSideTop">Top</label>
+                <input type="text" ngModel #SIIDimenTamponSideTop = "ngModel" name="SIIDimenTamponSideTop" class="form-control" placeholder="Top"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SIIDimenTamponSideTopQuant">Quantity</label>
+                <input type="text" ngModel #SIIDimenTamponSideTopQuant = "ngModel" name="SIIDimenTamponSideTopQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9 col-md-6">
+        <div class="form-group">
+            <label for="upto">Valid UpTo</label>
+            <input type="datetime-local" ngModel #spccuuptopto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                id="spccupto"><br>
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" class="btn btn-secondary" (click)="Update(AddSPCCForm)">Update</button>
+</form>

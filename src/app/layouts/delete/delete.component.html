@@ -1,0 +1,24 @@
+<div class="card" style="margin:10px;">
+    <form class="form" style="width: 60%; padding:10px;" #deleteForm = "ngForm" (submit) = "delete(deleteForm)">
+        <div class="form-group">
+            <label for="appsel">Select Sheets</label>
+            <select class="form-control" id="appsel" name="appsel" ngModel #appsel="ngModel">
+                <option name="" value="0">Spring Data</option>
+                <option name="coiling" value="1">Coiling</option>
+                <option name="grinding" value="2">Grinding</option>
+                <option name="chamfering" value="3">Chamfering</option>
+                <option name="spcc" value="4">Shot Peening &amp; Colour Coding</option>
+                <option name="hps" value="5">Hot Pre-Setting</option>
+                <option name="pn" value="6">Production No's</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="PartNo">Part No</label>
+            <input type="text" class="form-control" id="PartNo" placeholder="Enter Part No" name="PartNo" ngModel #PartNo="ngModel" required>
+        </div>
+        <br>
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+    <div class="alert alert-success" role="alert" *ngIf="message.success">{{message.success}}</div>
+    <div class="alert alert-danger" role="alert" *ngIf="message.message">{{message.message}}</div>
+</div>

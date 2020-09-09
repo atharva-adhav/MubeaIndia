@@ -1,0 +1,72 @@
+<form class="form" #AddProductionForm = "ngForm" (submit)="AddProduction(AddProductionForm)" style="padding: 10px;">
+    <h4>Producation No's</h4>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="Customer">Customer</label>
+                <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No.</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No."><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="s2019">2019</label>
+                <input type="number" ngModel #s2019 = "ngModel" name="s2019" class="form-control" placeholder="2019"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="s2020">2020</label>
+                <input type="number" ngModel #s2020 = "ngModel" name="s2020" class="form-control" placeholder="2020" id="part_no"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="s2021">2021</label>
+                <input type="number" ngModel #s2021 = "ngModel" name="s2021" class="form-control" placeholder="2021" id="part_no"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="s2022">2022</label>
+                <input type="number" ngModel #s2022 = "ngModel" name="s2022" class="form-control" placeholder="2022" id="part_no"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="s2023">2023</label>
+                <input type="number" ngModel #s2023 = "ngModel" name="s2023" class="form-control" placeholder="2023"><br>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" (click)="Update(AddProductionForm)" class="btn btn-secondary">Update</button>
+</form>
+
+<div *ngIf="Uresult">
+    <h1>Added: {{Uresult.PartNo | json}}</h1>
+</div>

@@ -1,0 +1,22 @@
+export interface ChamferingInt {
+    Customer: string,
+    PartNo: string,
+    PartName: string,
+    MAChamferingMachine: string,
+    Chamfer: string,
+    LoC: string,
+    e1: string,
+    e2: string,
+    ODc: string,
+    TGChamferingWheel: string,
+    TGChamferingWheelQuant: string,
+    MADistancePieceL1: string,
+    MARollerL1: string,
+    MASpacerL1: string,
+    MAGrindingPinOD: string,
+    MAShiftShoeL1: string,
+    MAShiftShoeL2: string,
+    MARevolverStarL1: string,
+    MARevolverStarOD1: string,
+    upto: Date
+}

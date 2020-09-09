@@ -1,0 +1,30 @@
+<div class="container-fluid" *ngIf="dataservice.getUserDetails()?.EMPID == null">
+    <div class="card" style="margin-left: 20%;margin-right: 20%;">
+        <div class="card-body">
+            <form #loginForm = "ngForm" (submit) = "login(loginForm)">
+                <div class="form-group">
+                    <label for="EMPID">Employee ID:</label>
+                    <input type="text" id="EMPID" ngModel #EMPID="ngModel" name="EMPID" placeholder="Enter email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Passwd">Password:</label>
+                    <input type="password" id="Passwd" ngModel #Passwd ="ngModel" name="Passwd" placeholder="Enter Password" class="form-control">
+                </div>
+                <a routerLink="/about" routerLinkActive >forgot password?</a><br><br>
+                <button type="submit" class="btn btn-primary" style="float: center; width:100%;">Login</button><br><br>
+            </form><br>
+            <div class="alert alert-warning" role="alert" *ngIf="err">
+                {{err.error.text}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" *ngIf="dataservice.getUserDetails()?.EMPID">
+    <ul class="list-group">
+        <li class="list-group-item">{{dataservice.getUserDetails()?.FullName}}</li>
+        <li class="list-group-item">{{dataservice.getUserDetails()?.EMPID}}</li>
+    </ul><br>
+    <a class="btn btn-secondary" style="float: center; width:100%; color:#fff;" routerLink="/register" routerLinkActive="active">Register a new user</a>
+</div>
+

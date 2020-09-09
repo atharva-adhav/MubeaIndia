@@ -1,0 +1,140 @@
+<form class="form"  style="padding: 10px;" #AddSpringForm = "ngForm" (submit) = "AddSpring(AddSpringForm)">
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No"
+                    id="PartNo" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="Customer">Customer</label>
+                <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer"
+                    id="Customer" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"
+                    id="PartName" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="WireDiameter">Wire Diameter</label>
+                <input type="text" ngModel #WireDiameter = "ngModel" name="WireDiameter" class="form-control" placeholder="Wire Diameter"
+                    id="WireDiameter" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="Process">Process</label>
+                <input type="text" ngModel #Process = "ngModel" name="Process" class="form-control" placeholder="Process" id="Process"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="Material">Material</label>
+                <input type="text" ngModel #Material = "ngModel" name="Material" class="form-control" placeholder="Material"
+                    id="Material" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="ID02">ID(+/-0.2)</label>
+                <input type="text" ngModel #ID02 = "ngModel" name="ID02" class="form-control" placeholder="ID(+/-0.2)" id="ID02" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="OD02">OD(+/-0.2)</label>
+                <input type="text" ngModel #OD02 = "ngModel" name="OD02" class="form-control" placeholder="OD(+/-0.2)" id="OD02" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="Lo">Lo</label>
+                <input type="number" ngModel #Lo = "ngModel" name="Lo" class="form-control" placeholder="Lo" id="Lo"><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="Lc">Lc</label>
+                <input type="number" ngModel #Lc = "ngModel" name="Lc" class="form-control" placeholder="Lc" id="Lc" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="nt01">nt(+/-0.1)</label>
+                <input type="number" ngModel #nt01 = "ngModel" name="nt01" class="form-control" placeholder="nt(+/-0.1)"
+                    id="nt01" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="F1">F1</label>
+                <input type="number" ngModel #F1 = "ngModel" name="F1" class="form-control" placeholder="F1" id="F1"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="F2">F2</label>
+                <input type="number" ngModel #F2 = "ngModel" name="F2" class="form-control" placeholder="F2" id="F2" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="GrossWeight">Gross Weight</label>
+                <input type="number" ngModel #GrossWeight = "ngModel" name="GrossWeight" class="form-control" placeholder="Gross Weight"
+                    id="GrossWeight" required><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-6">
+            <div class="form-group">
+                <label for="SpringsEngine">Springs/engine</label>
+                <input type="text" ngModel #SpringsEngine = "ngModel" name="SpringsEngine" class="form-control" placeholder="Springs/engine"
+                    id="SpringsEngine" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="Chamfering">Chamfering</label>
+                <input type="text" ngModel #Chamfering = "ngModel" name="Chamfering" class="form-control" placeholder="Chamfering"
+                    id="Chamfering" required><br>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-6">
+            <div class="form-group">
+                <label for="upto">Valid UpTo</label>
+                <input type="datetime-local" ngModel #upto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                    id="upto"><br>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" (click)="Update(AddSpringForm)" class="btn btn-secondary">Update</button>
+
+</form>

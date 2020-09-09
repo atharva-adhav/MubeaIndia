@@ -1,0 +1,170 @@
+<form class="form" #AddChamferingForm = "ngForm" (submit) = "AddChamfering(AddChamferingForm)" style="padding: 10px;">
+    <h4>Chamfering</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Customer">Customer</label>
+                <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No.</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No."><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAChamferingMachine">Chamfering Machine (Mubea, Attendorn)</label>
+                <input type="text" ngModel #MAChamferingMachine = "ngModel" name="MAChamferingMachine" class="form-control" placeholder="Chamfering Machine(Mubea, Attendorn)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Chamfer">Chamfer</label>
+                <input type="text" ngModel #Chamfer = "ngModel" name="Chamfer" class="form-control" placeholder="Chamfer"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LoC">(Lo)c</label>
+                <input type="text" ngModel #LoC = "ngModel" name="LoC" class="form-control" placeholder="(Lo)c"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="e1">e1</label>
+                <input type="text" ngModel #e1 = "ngModel" name="e1" class="form-control" placeholder="e1"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="e2">e2</label>
+                <input type="text" ngModel #e2 = "ngModel" name="e2" class="form-control" placeholder="e2"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ODc">(OD)c</label>
+                <input type="text" ngModel #ODc = "ngModel" name="ODc" class="form-control" placeholder="odc"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+    <h4 style="text-align: center;">Theleico, Germany</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="TGChamferingWheel">Chamfering Wheel</label>
+                <input type="text" ngModel #TGChamferingWheel = "ngModel" name="TGChamferingWheel" class="form-control" placeholder="Chamfering Wheel"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="TGChamferingWheelQuant">Quantity</label>
+                <input type="text" ngModel #TGChamferingWheelQuant = "ngModel" name="TGChamferingWheelQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+    <h4 style="text-align: center;">Mubea, Attendorn</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MADistancePieceL1">Distance Piece (L1)</label>
+                <input type="text" ngModel #MADistancePieceL1 = "ngModel" name="MADistancePieceL1" class="form-control" placeholder="Distance Piece (L1)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MARollerL1">Roller (L1)</label>
+                <input type="text" ngModel #MARollerL1 = "ngModel" name="MARollerL1" class="form-control" placeholder="Roller (L1)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MASpacerL1">Spacer (L1)</label>
+                <input type="text" ngModel #MASpacerL1 = "ngModel" name="MASpacerL1" class="form-control" placeholder="Spacer (L1)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAGrindingPinOD">Grinding Pin (OD)</label>
+                <input type="text" ngModel #MAGrindingPinOD = "ngModel" name="MAGrindingPinOD" class="form-control" placeholder="Grinding Pin (OD)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAShiftShoeL1">Shift Shoe (L1)</label>
+                <input type="text" ngModel #MAShiftShoeL1 = "ngModel" name="MAShiftShoeL1" class="form-control" placeholder="Shift Shoe (L1)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAShiftShoeL2">Shift Shoe (L2)</label>
+                <input type="text" ngModel #MAShiftShoeL2 = "ngModel" name="MAShiftShoeL2" class="form-control" placeholder="Shift Shoe(L2)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MARevolverStarL1">Revolver Star(L1)</label>
+                <input type="text" ngModel #MARevolverStarL1 = "ngModel" name="MARevolverStarL1" class="form-control" placeholder="Revolver Star(L1)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MARevolverStarOD1">Revolver Star(OD1)</label>
+                <input type="text" ngModel #MARevolverStarOD1 = "ngModel" name="MARevolverStarOD1" class="form-control" placeholder="Revolver Star(OD)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9 col-md-6">
+        <div class="form-group">
+            <label for="upto">Valid UpTo</label>
+            <input type="datetime-local" ngModel #upto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                id="chamferupto"><br>
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" class="btn btn-secondary" (click)="Update(AddChamferingForm)">Update</button>
+</form>

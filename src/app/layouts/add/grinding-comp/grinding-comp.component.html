@@ -1,0 +1,203 @@
+<form class="form" #AddGrindingForm = "ngForm" (submit)="AddGrinding(AddGrindingForm)"  style="padding: 10px;">
+    <h4>Grinding</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Customer">Customer</label>
+                <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer" id="Gcustomer"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAGrindingMachine">Grinding Machine(Mubea, Attendorn)</label>
+                <input type="text" ngModel #MAGrindingMachine = "ngModel" name="MAGrindingMachine" class="form-control"
+                    placeholder="Grinding Machine"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoadingPlateNo">Loading Plate No(S S Enterprise Pune)</label>
+                <input type="text" ngModel #SSEPLoadingPlateNo = "ngModel" name="SSEPLoadingPlateNo" class="form-control"
+                    placeholder="Loading Plate No (S. S. Enterprise Pune)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="GrindingSpeed">Grinding Speed</label>
+                <input type="text" ngModel #GrindingSpeed = "ngModel" name="GrindingSpeed" class="form-control"
+                    placeholder="Grinding Speed"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="GrindingAngle">Grinding Angle</label>
+                <input type="text" ngModel #GrindingAngle = "ngModel" name="GrindingAngle" class="form-control"
+                    placeholder="Grinding Angle"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LoG">(Lo)g</label>
+                <input type="text" ngModel #LoG = "ngModel" name="LoG" class="form-control" placeholder="(Lo)g"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="e1">e1</label>
+                <input type="text" ngModel #e1 = "ngModel" name="e1" class="form-control" placeholder="e1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="e2">e2</label>
+                <input type="text" ngModel #e2 = "ngModel" name="e2" class="form-control" placeholder="e2"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ODg">(OD)g</label>
+                <input type="text" ngModel #ODg = "ngModel" name="ODg" class="form-control" placeholder="(OD)g"><br>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+    <h4 style="text-align: center;">Loading Sockets</h4>
+    <h5 style="text-align: center;">Mubea, Attendorn</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube1">Tube 1</label>
+                <input type="text" ngModel #MALSTube1 = "ngModel" name="MALSTube1" class="form-control" placeholder="Tube 1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube1Quant">Quantity</label>
+                <input type="text" ngModel #MALSTube1Quant = "ngModel" name="MALSTube1Quant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube2">Tube 2</label>
+                <input type="text" ngModel #MALSTube2 = "ngModel" name="MALSTube2" class="form-control" placeholder="Tube 2"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube2Quant">Quantity</label>
+                <input type="text" ngModel #MALSTube2Quant = "ngModel" name="MALSTube2Quant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube3">Tube 3</label>
+                <input type="text" ngModel #MALSTube3 = "ngModel" name="MALSTube3" class="form-control" placeholder="Tube 3"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MALSTube3Quant">Quantity</label>
+                <input type="text" ngModel #MALSTube3Quant = "ngModel" name="MALSTube3Quant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+    <h4 style="text-align: center;">S S Enterprise, Pune</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPODDisk">OD Disc</label>
+                <input type="text" ngModel #SSEPODDisk = "ngModel" name="SSEPODDisk" class="form-control" placeholder="OD Disc"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPThicknessDisk">Thickness (Disc)</label>
+                <input type="text" ngModel #SSEPThicknessDisk = "ngModel" name="SSEPThicknessDisk" class="form-control"
+                    placeholder="Thickness (Disc)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPIdBush">(ID) Bush</label>
+                <input type="text" ngModel #SSEPIdBush = "ngModel" name="SSEPIdBush" class="form-control" placeholder="(ID) Bush"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPThicknessBush">Thickness (Bush)</label>
+                <input type="text" ngModel #SSEPThicknessBush = "ngModel" name="SSEPThicknessBush" class="form-control"
+                    placeholder="Thickness (Bush)"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPODBush">(OD) Bush</label>
+                <input type="text" ngModel #SSEPODBush = "ngModel" name="SSEPODBush" class="form-control" placeholder="(OD) Bush"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPHoleF">HoleØ</label>
+                <input type="text" ngModel #SSEPHoleF = "ngModel" name="SSEPHoleF" class="form-control" placeholder="HoleØ"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoBush">(Lo) Bush</label>
+                <input type="text" ngModel #SSEPLoBush = "ngModel" name="SSEPLoBush" class="form-control" placeholder="(Lo) Bush"><br>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9 col-md-6">
+        <div class="form-group">
+            <label for="upto">Valid UpTo</label>
+            <input type="datetime-local" ngModel #upto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                id="upto"><br>
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" (click)="Update(AddGrindingForm)" class="btn btn-secondary">Update</button>
+</form>

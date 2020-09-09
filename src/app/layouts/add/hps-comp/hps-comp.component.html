@@ -1,0 +1,348 @@
+<form class="form" #AddHPSForm="ngForm" (submit)="AddHps(AddHPSForm)" style="padding: 10px;">
+    <h4>Hot Pre-Setting</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Customer">Customer</label>
+                <input type="text" ngModel #Customer = "ngModel" name="Customer" class="form-control" placeholder="Customer"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No.</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No."><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SpringMin">Spring/Min</label>
+                <input type="text" ngModel #SpringMin = "ngModel" name="SpringMin" class="form-control" placeholder="Spring/Min"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MAHPSNo">HPS No(Mubea, Attendorn)</label>
+                <input type="text" ngModel #MAHPSNo = "ngModel" name="MAHPSNo" class="form-control" placeholder="HPS No (Mubea, Attendorn)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LoFinal">(Lo)Final</label>
+                <input type="text" ngModel #LoFinal = "ngModel" name="LoFinal" class="form-control" placeholder="(Lo)Final"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ID1">ID</label>
+                <input type="text" ngModel #ID1 = "ngModel" name="ID1" class="form-control" placeholder="ID"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="OD">OD</label>
+                <input type="text" ngModel #OD = "ngModel" name="OD" class="form-control" placeholder="OD"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Lc">Lc</label>
+                <input type="text" ngModel #Lc = "ngModel" name="Lc" class="form-control" placeholder="Lc"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="F1">F1</label>
+                <input type="text" ngModel #F1 = "ngModel" name="F1" class="form-control" placeholder="F1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="F2">F2</label>
+                <input type="text" ngModel #F2 = "ngModel" name="F2" class="form-control" placeholder="F2"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">Kaivalya Engineering, Bhosari Pune</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube1ID">Tube 1 (ID)</label>
+                <input type="text" ngModel #KEBPTube1ID = "ngModel" name="KEBPTube1ID" class="form-control" placeholder="Tube 1 (ID)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube1IDQuant">Quantity</label>
+                <input type="text" ngModel #KEBPTube1IDQuant = "ngModel" name="KEBPTube1IDQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube2ID">Tube 2 (ID)</label>
+                <input type="text" ngModel #KEBPTube2ID = "ngModel" name="KEBPTube2ID" class="form-control" placeholder="Tube 2 (ID)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube2IDQuant">Quantity</label>
+                <input type="text" ngModel #KEBPTube2IDQuant = "ngModel" name="KEBPTube2IDQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube3ID">Tube 3 (ID)</label>
+                <input type="text" ngModel #KEBPTube3ID = "ngModel" name="KEBPTube3ID" class="form-control" placeholder="Tube 3 (ID)"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPTube3IDQuant">Quantity</label>
+                <input type="text" ngModel #KEBPTube3IDQuant = "ngModel" name="KEBPTube3IDQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">Load Test(Tooling)</h4>
+    <h5 style="text-align: center;">S S Enterprises, Pune</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoadTestToolOD1">OD1</label>
+                <input type="text" ngModel #SSEPLoadTestToolOD1 = "ngModel" name="SSEPLoadTestToolOD1" class="form-control" placeholder="OD1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoadTestToolOD2">OD2</label>
+                <input type="text" ngModel #SSEPLoadTestToolOD2 = "ngModel" name="SSEPLoadTestToolOD2" class="form-control" placeholder="OD2"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoadTestL1">L1</label>
+                <input type="text" ngModel #SSEPLoadTestL1 = "ngModel" name="SSEPLoadTestL1" class="form-control" placeholder="L1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPLoadTestL2">L2</label>
+                <input type="text" ngModel #SSEPLoadTestL2 = "ngModel" name="SSEPLoadTestL2" class="form-control" placeholder="L2"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="SSEPLoadTestToolQuant">Quantity</label>
+                <input type="text" ngModel #SSEPLoadTestToolQuant = "ngModel" name="SSEPLoadTestToolQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">Take-Up-Prism</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="TUPR">R</label>
+                <input type="text" ngModel #TUPR = "ngModel" name="TUPR" class="form-control" placeholder="R"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="TUPL1">L1</label>
+                <input type="text" ngModel #TUPL1 = "ngModel" name="TUPL1" class="form-control" placeholder="L1"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="TUPQuant">Quantity</label>
+                <input type="text" ngModel #TUPQuant = "ngModel" name="TUPQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">Kaivalya Engineering, Bhosari Pune</h4>
+    <h5 style="text-align: center;">Stripper ID Control</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPStripperIDControlID">ID</label>
+                <input type="text" ngModel #KEBPStripperIDControlID = "ngModel" name="KEBPStripperIDControlID" class="form-control" placeholder="ID"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPStripperIDControlQuant">Quantity</label>
+                <input type="text" ngModel #KEBPStripperIDControlQuant = "ngModel" name="KEBPStripperIDControlQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <h5 style="text-align: center;">Inner Diameter Test</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPInnerDiameterTestOD1">OD1</label>
+                <input type="text" ngModel #KEBPInnerDiameterTestOD1 = "ngModel" name="KEBPInnerDiameterTestOD1" class="form-control" placeholder="OD1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPInnerDiameterTestOD2">OD2</label>
+                <input type="text" ngModel #KEBPInnerDiameterTestOD2 = "ngModel" name="KEBPInnerDiameterTestOD2" class="form-control" placeholder="OD2"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPInnerDiameterTestL1">L1</label>
+                <input type="text" ngModel #KEBPInnerDiameterTestL1 = "ngModel" name="KEBPInnerDiameterTestL1" class="form-control" placeholder="L1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPInnerDiameterTestQuant">Quantity</label>
+                <input type="text" ngModel #KEBPInnerDiameterTestQuant = "ngModel" name="KEBPInnerDiameterTestQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">S S Enterprises, Pune</h4>
+    <h5 style="text-align: center;">Bottom Section ID Control</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPBottomSectionIDControlID">ID</label>
+                <input type="text" ngModel #SSEPBottomSectionIDControlID = "ngModel" name="SSEPBottomSectionIDControlID" class="form-control" placeholder="ID"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPBottomSectionIDControlIDQuant">Quantity</label>
+                <input type="text" ngModel #SSEPBottomSectionIDControlIDQuant = "ngModel" name="SSEPBottomSectionIDControlIDQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPBottomSectionIDControlOD">OD</label>
+                <input type="text" ngModel #SSEPBottomSectionIDControlOD = "ngModel" name="SSEPBottomSectionIDControlOD" class="form-control" placeholder="OD"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPBottomSectionIDControlODQuant">Quantity</label>
+                <input type="text" ngModel #SSEPBottomSectionIDControlODQuant = "ngModel" name="SSEPBottomSectionIDControlODQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <h5 style="text-align: center;">C Ring</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPCRingThickness">Thickness</label>
+                <input type="text" ngModel #SSEPCRingThickness = "ngModel" name="SSEPCRingThickness" class="form-control" placeholder="Thickness"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPCRingQuant">Quantity</label>
+                <input type="text" ngModel #SSEPCRingQuant = "ngModel" name="SSEPCRingQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+    <h4 style="text-align: center;">Kaivalya Engineering, Bhosari Pune</h4>
+    <h5 style="text-align: center;">OD Box</h5>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPODBoxOD">OD</label>
+                <input type="text" ngModel #SSEPODBoxOD = "ngModel" name="SSEPODBoxOD" class="form-control" placeholder="OD"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="SSEPODBoxODQuant">Quantity</label>
+                <input type="text" ngModel #SSEPODBoxODQuant = "ngModel" name="SSEPODBoxODQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9 col-md-6">
+        <div class="form-group">
+            <label for="upto">Valid UpTo</label>
+            <input type="datetime-local" ngModel #upto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                id="hpsupto"><br>
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" class="btn btn-secondary" (click)="Update(AddHPSForm)">Update</button>
+</form>

@@ -1,0 +1,839 @@
+<div class="container">
+  <form class="form-inline" style="margin: 5px;" #searchForm = "ngForm" (submit)="onSubmit(searchForm)">
+    <input
+      type="text"
+      name="partno"
+      class="form-control"
+      placeholder="Part Number"
+      ngModel
+      #PartNo="ngModel"
+      name="PartNo"
+      required
+    />&nbsp;
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+  <hr />
+  <div *ngIf="spring[0] != null">
+  <h3>Spring Data</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th scope="col">Property</th>
+            <th scope="col">Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Part No</th>
+            <td>{{spring[0].PartNo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Customer</th>
+            <td>{{spring[0].Customer}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Part Name</th>
+            <td>{{spring[0].PartName}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Wire Diameter</th>
+            <td>{{spring[0].WireDiameter}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Process</th>
+            <td>{{spring[0].Process}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Material</th>
+            <td>{{spring[0].Material}}</td>
+          </tr>
+          <tr>
+            <th scope="row">ID(+/-0.2)</th>
+            <td>{{spring[0].ID02}}</td>
+          </tr>
+          <tr>
+            <th scope="row">OD(+/-0.2)</th>
+            <td>{{spring[0].OD02}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th scope="col">Property</th>
+            <th scope="col">Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lo</th>
+            <td>{{spring[0].Lo}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Lc</th>
+            <td>{{spring[0].Lc}}</td>
+          </tr>
+          <tr>
+            <th scope="row">nt(+/-0.1)</th>
+            <td>{{spring[0].nt01}}</td>
+          </tr>
+          <tr>
+            <th scope="row">F1</th>
+            <td>{{spring[0].F1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">F2</th>
+            <td>{{spring[0].F2}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Gross Weight</th>
+            <td>{{spring[0].GrossWeight}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Springs/Engine</th>
+            <td>{{spring[0].SpringsEngine}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Chamfering</th>
+            <td>{{spring[0].Chamfering}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <h4>Coiling</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th scope="col">Property</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Coiling Machine</th>
+            <td>{{coiling[0].WGCoilingMachine}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Coiling Speed</th>
+            <td>{{coiling[0].CoilingSpeed}}</td>
+          </tr>
+          <tr>
+            <th scope="row">(Lo)C</th>
+            <td>{{coiling[0].Loc}}</td>
+          </tr>
+          <tr>
+            <th scope="row">(ID)c</th>
+            <td>{{coiling[0].IdC}}</td>
+          </tr>
+          <tr>
+            <th scope="row">(OD)c</th>
+            <td>{{coiling[0].OdC}}</td>
+          </tr>
+          <tr>
+            <th scope="row">nt</th>
+            <td>{{coiling[0].KEBPnt}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th scope="col">Tools</th>
+            <th scope="col">Dimensions</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Supplier</th>
+            <th scope="col">Made On</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">nt</th>
+            <td>{{coiling[0].KEBPnt}}</td>
+            <td>{{coiling[0].KEBPntQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">(ID)Mandrel</th>
+            <td>{{coiling[0].KEBPIDMandrel}}</td>
+            <td>{{coiling[0].KEBPIDMandrelQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">(OD)Bush</th>
+            <td>{{coiling[0].KEBPODBush}}</td>
+            <td>{{coiling[0].KEBPODBushQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Length M</th>
+            <td>{{coiling[0].KEBPLengthM}}</td>
+            <td>{{coiling[0].LengthMQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Pitch Tool</th>
+            <td>{{coiling[0].KEBPPitchTool}}</td>
+            <td>{{coiling[0].KEBPPitchToolQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Imess Bush(Lo)</th>
+            <td>{{coiling[0].KEBPImessBushLo}}</td>
+            <td>{{coiling[0].KEBPImessBushQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Imess Bush(OD)</th>
+            <td>{{coiling[0].KEBPImessBushOD}}</td>
+            <td>{{coiling[0].KEBPImessBushQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Feed Roller</th>
+            <td>{{coiling[0].WGENFeedRoller}}</td>
+            <td>{{coiling[0].WGENFRQuant}}</td>
+            <td>WTH, Germany & Electronica, Nashik</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Wire Guide</th>
+            <td>{{coiling[0].WTHGWireGuide}}</td>
+            <td>{{coiling[0].WTHGWGQuant}}</td>
+            <td>WTH, Germany & Electronica, Nashik</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Cutter Inserts</th>
+            <td>{{coiling[0].ENCutterInserts}}</td>
+            <td>{{coiling[0].ENCIQuant}}</td>
+            <td>Electronica, Nashik</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Coiling Mandrel</th>
+            <td>{{coiling[0].ENCoilingMandrel}}</td>
+            <td>{{coiling[0].ENCMQuant}}</td>
+            <td>Electronica, Nashik</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">MIT Mandrel(L Total)</th>
+            <td>{{coiling[0].MMXGLTotal}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">L1</th>
+            <td>{{coiling[0].MMXGL1}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">L2</th>
+            <td>{{coiling[0].MMXGL2}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">OD1</th>
+            <td>{{coiling[0].MMXGOD1}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">OD2</th>
+            <td>{{coiling[0].MMXGOD2}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">OD3</th>
+            <td>{{coiling[0].MMXGOD3}}</td>
+            <td>{{coiling[0].MMXGQuant}}</td>
+            <td>Xeram, Germany</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Coiling Pin</th>
+            <td>{{coiling[0].CoilingPin}}</td>
+            <td>NA</td>
+            <td>WTH, Germany & Electronica, Nashik</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Cutting Knife</th>
+            <td>{{coiling[0].KEBPCuttingKnifel}}</td>
+            <td>NA</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Pitch Tool</th>
+            <td>{{coiling[0].KEBPPitchTooll}}</td>
+            <td>NA</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{coiling[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Temparature</th>
+            <td>{{coiling[0].temprature}}</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>NA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <h4>Grinding</h4>
+  <div class="row" >
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Properties</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Grinding Speed</th>
+            <td>{{grinding[0].GrindingSpeed}}</td>
+          </tr>
+          <tr>
+            <th>Grinding Angle</th>
+            <td>{{grinding[0].GrindingAngle}}</td>
+          </tr>
+          <tr>
+            <th>(Lo)g</th>
+            <td>{{grinding[0].LoG}}</td>
+          </tr>
+          <tr>
+            <th>e1</th>
+            <td>{{grinding[0].e1}}</td>
+          </tr>
+          <tr>
+            <th>e2</th>
+            <td>{{grinding[0].e2}}</td>
+          </tr>
+          <tr>
+            <th>(OD)g</th>
+            <td>{{grinding[0].ODg}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Tools</th>
+            <th>Dimensions</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Lead Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Loading Sockets(Tube 1)</th>
+            <td>{{grinding[0].MALSTube1}}</td>
+            <td>{{grinding[0].MALSTube1Quant}}</td>
+            <td>Mubea, attendorn</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Loading Sockets(Tube 2)</th>
+            <td>{{grinding[0].MALSTube2}}</td>
+            <td>{{grinding[0].MALSTube2Quant}}</td>
+            <td>Mubea, attendorn</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Loading Sockets(Tube 3)</th>
+            <td>{{grinding[0].MALSTube3}}</td>
+            <td>{{grinding[0].MALSTube3Quant}}</td>
+            <td>Mubea, attendorn</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Grinding Machine</th>
+            <td>{{grinding[0].MAGrindingMachine}}</td>
+            <td>NA</td>
+            <td>Mubea, attendorn</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Loading Plate No.</th>
+            <td>{{grinding[0].SSEPLoadingPlateNo}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>OD Disc</th>
+            <td>{{grinding[0].SSEPODDisk}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Thickness(Disc)</th>
+            <td>{{grinding[0].SSEPThicknessDisk}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>(ID)Bush</th>
+            <td>{{grinding[0].SSEPIdBush}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Thickness(Bush)</th>
+            <td>{{grinding[0].SSEPThicknessBush}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>(OD)Bush</th>
+            <td>{{grinding[0].SSEPODBush}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>HoleØ</th>
+            <td>{{grinding[0].SSEPHoleF}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>(Lo)Bush</th>
+            <td>{{grinding[0].SSEPLoBush}}</td>
+            <td>NA</td>
+            <td>S S, Enterprises, Pune</td>
+            <td>{{grinding[0].upto | date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <h4>Chamfering</h4>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Properties</th>
+            <th>Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Chamfer</th>
+            <td>{{chamfering[0].Chamfer}}</td>
+          </tr>
+          <tr>
+            <th>(Lo)C</th>
+            <td>{{chamfering[0].LoC}}</td>
+          </tr>
+          <tr>
+            <th>e1</th>
+            <td>{{chamfering[0].e1}}</td>
+          </tr>
+          <tr>
+            <th>e2</th>
+            <td>{{chamfering[0].e2}}</td>
+          </tr>
+          <tr>
+            <th>(OD)c</th>
+            <td>{{chamfering[0].ODc}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Tools</th>
+            <th>Dimensions</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Made On</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Chamfering Wheel</th>
+            <td>{{chamfering[0].TGChamferingWheel}}</td>
+            <td>{{chamfering[0].TGChamferingWheelQuant}}</td>
+            <td>Theleco, Germany & Pferd works</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Chamfering Machine</th>
+            <td>{{chamfering[0].MAChamferingMachine}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Distance Piece</th>
+            <td>{{chamfering[0].MADistancePieceL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Roller</th>
+            <td>{{chamfering[0].MARollerL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Spacer</th>
+            <td>{{chamfering[0].MASpacerL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Grinding Pin</th>
+            <td>{{chamfering[0].MAGrindingPinOD}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Shift Shoe(L1)</th>
+            <td>{{chamfering[0].MAShiftShoeL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Shift Shoe(L2)</th>
+            <td>{{chamfering[0].MAShiftShoeL2}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Revolver(L1)</th>
+            <td>{{chamfering[0].MARevolverStarL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th>Revolver(OD1)</th>
+            <td>{{chamfering[0].MARevolverStarOD1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{chamfering[0].upto | date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <h3>Shot Peening & Colour Coding</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Properties</th>
+            <th>Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Process</th>
+            <td>{{spcc[0].MAProcess}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Grain Size</th>
+            <td>{{spcc[0].GrainSize}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color: #fff;">
+          <tr>
+            <th>Tools</th>
+            <th>Dimensions</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Lead Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">HPS No.</th>
+            <td>{{spcc[0].MAHPSNo}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{spcc[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Revolver(L1)</th>
+            <td>{{spcc[0].RevolverL1}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{spcc[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Revolver(ø)</th>
+            <td>{{spcc[0].RevolverFi}}</td>
+            <td>NA</td>
+            <td>Mubea, Attendorn</td>
+            <td>{{spcc[0].upto | date}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Color</th>
+            <td>{{spcc[0].Color}}</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>NA</td>
+          </tr>
+          <tr>
+            <th scope="row">Cliché side</th>
+            <td>{{spcc[0].SIIDimenClichePlateDimen}}</td>
+            <td>{{spcc[0].SIIDimenClichePlateQuant}}</td>
+            <td>Spinks Impex India</td>
+            <td>{{spcc[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Dimension Tampon Side</th>
+            <td>{{spcc[0].SIIDimenTamponSideSide}}</td>
+            <td>{{spcc[0].SIIDimenTamponSideSideQuant}}</td>
+            <td>Spinks Impex India</td>
+            <td>{{spcc[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Dimension Tampon Top</th>
+            <td>{{spcc[0].SIIDimenTamponSideTop}}</td>
+            <td>{{spcc[0].SIIDimenTamponSideTopQuant}}</td>
+            <td>Spinks Impex India</td>
+            <td>{{spcc[0].upto}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <h3>Hot Pre-Setting</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color:#fff;">
+          <tr>
+            <th>Properties</th>
+            <th>Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>(Lo)Final</th>
+            <td>{{hps[0].LoFinal}}</td>
+          </tr>
+          <tr>
+            <th>ID</th>
+            <td>{{hps[0].ID1}}</td>
+          </tr>
+          <tr>
+            <th>OD</th>
+            <td>{{hps[0].OD}}</td>
+          </tr>
+          <tr>
+            <th>Lc</th>
+            <td>{{hps[0].Lc}}</td>
+          </tr>
+          <tr>
+            <th>F1</th>
+            <td>{{hps[0].F1}}</td>
+          </tr>
+          <tr>
+            <th>F2</th>
+            <td>{{hps[0].F2}}</td>
+          </tr>
+          <tr>
+            <th>Springs/Min</th>
+            <td>{{hps[0].SpringMin}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <thead style="background-color: #333; color:#fff;">
+          <tr>
+            <th>Tools</th>
+            <th>Dimnesions</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Lead Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Tube 1</th>
+            <td>{{hps[0].KEBPTube1ID}}</td>
+            <td>{{hps[0].KEBPTube1IDQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tube 2</th>
+            <td>{{hps[0].KEBPTube2ID}}</td>
+            <td>{{hps[0].KEBPTube2IDQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tube 3</th>
+            <td>{{hps[0].KEBPTube3ID}}</td>
+            <td>{{hps[0].KEBPTube3IDQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Load Test(OD1)</th>
+            <td>{{hps[0].SSEPLoadTestToolOD1}}</td>
+            <td>NA</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Load Test(OD2)</th>
+            <td>{{hps[0].SSEPLoadTestToolOD2}}</td>
+            <td>NA</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Load Test(L1)</th>
+            <td>{{hps[0].SSEPLoadTestL1}}</td>
+            <td>NA</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Load Test(L2)</th>
+            <td>{{hps[0].SSEPLoadTestL2}}</td>
+            <td>{{hps[0].SSEPLoadTestToolQuant}}</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Take-up-prism®</th>
+            <td>{{hps[0].TUPL1}}</td>
+            <td>{{hps[0].TUPQuant}}</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Take-Up-Prism(L1)</th>
+            <td>{{hps[0].TUPL1}}</td>
+            <td>NA</td>
+            <td>S S Enterprises, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Stripper ID Control</th>
+            <td>{{hps[0].KEBPStripperIDControlID}}</td>
+            <td>{{hps[0].KEBPStripperIDControlQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Inner Diameter Test(OD1)</th>
+            <td>{{hps[0].KEBPInnerDiameterTestOD1}}</td>
+            <td>NA</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Inner Diameter Test(OD2)</th>
+            <td>{{hps[0].KEBPInnerDiameterTestOD2}}</td>
+            <td>NA</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Inner Diameter Test(L1)</th>
+            <td>{{hps[0].KEBPInnerDiameterTestL1}}</td>
+            <td>{{hps[0].KEBPInnerDiameterTestQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Bottom Section ID Control(ID)</th>
+            <td>{{hps[0].SSEPBottomSectionIDControlID}}</td>
+            <td>{{hps.SSEPBottomSectionIDControlIDQuant}}</td>
+            <td>S S Engineering, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Bottom Section ID Control(OD)</th>
+            <td>{{hps[0].SSEPBottomSectionIDControlOD}}</td>
+            <td>{{hps[0].SSEPBottomSectionIDControlODQuant}}</td>
+            <td>S S Engineering, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">C Ring</th>
+            <td>{{hps[0].SSEPCRingThickness}}</td>
+            <td>{{hps[0].SSEPCRingQuant}}</td>
+            <td>S S Engineering, Pune</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+          <tr>
+            <th scope="row">OD Box</th>
+            <td>{{hps[0].SSEPODBoxOD}}</td>
+            <td>{{hps[0].SSEPODBoxODQuant}}</td>
+            <td>Kaivalya Engineering, Bhosri</td>
+            <td>{{hps[0].upto}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<h2 *ngIf="spring[0] == null" class="alert alert-warning">Nothing available...</h2>
+</div>

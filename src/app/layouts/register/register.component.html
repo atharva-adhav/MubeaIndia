@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="card" style="margin-left: 20%;margin-right: 20%;">
+        <div class="card-body">
+            <form #registerForm="ngForm" (submit)="register(registerForm)">
+                <div class="form-group">
+                    <label for="FullName">Employee Name:</label>
+                    <input type="text" id="FullName" ngModel #FullName="ngModel" name="FullName" placeholder="Enter Full Name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="EMPID">Employee ID:</label>
+                    <input type="text" id="EMPID" ngModel #EMPID="ngModel" name="EMPID" placeholder="Enter Employee ID" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Passwd">Password:</label>
+                    <input type="password" id="Passwd" ngModel #Passwd="ngModel" name="Passwd" placeholder="Enter Password" class="form-control">
+                </div>
+                <button class="btn btn-primary" style="float: center; width:100%;" type="submit">Register</button><br><br>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="err">
+        <h3>{{err.error | json}}</h3>
+    </div>
+</div>

@@ -1,0 +1,359 @@
+<form class="form" #AddCoilingForm = "ngForm" (submit) = "AddCoiling(AddCoilingForm)" style="padding: 10px;">
+    <h4>Coiling</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="OEM">OEM</label>
+                <input type="text" ngModel #OEM = "ngModel" name="OEM" class="form-control" placeholder="OEM"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartNo">Part No.</label>
+                <input type="text" ngModel #PartNo = "ngModel" name="PartNo" class="form-control" placeholder="Part No."><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="PartName">Part Name</label>
+                <input type="text" ngModel #PartName = "ngModel" name="PartName" class="form-control" placeholder="Part Name"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WireDiameter">Wire Diameter</label>
+                <input type="text" ngModel #WireDiameter = "ngModel" name="WireDiameter" class="form-control" placeholder="Wire Diameter"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Process">Process</label>
+                <input type="text" ngModel #Process = "ngModel" name="Process" class="form-control" placeholder="Process"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WGCoilingMachine">Coiling Machine (Wafios, Germany)</label>
+                <input type="number" ngModel #WGCoilingMachine = "ngModel" name="WGCoilingMachine" class="form-control"
+                    placeholder="Coiling Machine (Wafios, Germany)"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="CoilingSpeed">Coiling Speed</label>
+                <input type="text" ngModel #CoilingSpeed = "ngModel" name="CoilingSpeed" class="form-control" placeholder="Coiling Speed"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Loc">(Lo)C</label>
+                <input type="text" ngModel #Loc = "ngModel" name="Loc" class="form-control" placeholder="(Lo)C"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="IdC">(ID)c</label>
+                <input type="text" ngModel #IdC = "ngModel" name="IdC" class="form-control" placeholder="(ID)c"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="OdC">(OD)c</label>
+                <input type="text" ngModel #OdC = "ngModel" name="OdC" class="form-control" placeholder="(OD)c"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h4 style="text-align:center;">Kaivalya Engineering Bhosari, Pune</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPnt">nt</label>
+                <input type="text" ngModel #KEBPnt = "ngModel" name="KEBPnt" class="form-control" placeholder="nt"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPntQuant">Quantity</label>
+                <input type="text" ngModel #KEBPntQuant = "ngModel" name="KEBPntQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPIDMandrel">(ID)Mandrel</label>
+                <input type="text" ngModel #KEBPIDMandrel = "ngModel" name="KEBPIDMandrel" class="form-control" placeholder="(ID)Mandrel"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPIDMandrelQuant">Quantity</label>
+                <input type="text" ngModel #KEBPIDMandrelQuant = "ngModel" name="KEBPIDMandrelQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPODBush">(OD)Bush</label>
+                <input type="text" ngModel #KEBPODBush = "ngModel" name="KEBPODBush" class="form-control" placeholder="odbush"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPODBushQuant">Quantity</label>
+                <input type="text" ngModel #KEBPODBushQuant = "ngModel" name="KEBPODBushQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPLengthM">Length M</label>
+                <input type="text" ngModel #KEBPLengthM = "ngModel" name="KEBPLengthM" class="form-control" placeholder="Length M"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="LengthMQuant">Quantity</label>
+                <input type="text" ngModel #LengthMQuant = "ngModel" name="LengthMQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPPitchTool">Pitch Tool</label>
+                <input type="text" ngModel #KEBPPitchTool = "ngModel" name="KEBPPitchTool" class="form-control" placeholder="Pitch Tool"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPPitchToolQuant">Quantity</label>
+                <input type="text" ngModel #KEBPPitchToolQuant = "ngModel"  name="KEBPPitchToolQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="KEBPImessBushLo">Imess Bush(LO)</label>
+                <input type="text" ngModel #KEBPImessBushLo = "ngModel" name="KEBPImessBushLo" class="form-control" placeholder="Imess Bush"><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="KEBPImessBushOD">Imess Bush(OD)</label>
+                <input type="text" ngModel #KEBPImessBushOD = "ngModel" name="KEBPImessBushOD" class="form-control" placeholder="Imess Bush"><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="KEBPImessBushQuant">Quantity</label>
+                <input type="text" ngModel #KEBPImessBushQuant = "ngModel" name="KEBPImessBushQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+
+    <h4>Germany & Electronica, Nashik</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WGENFeedRoller">Feed Roller</label>
+                <input type="text" ngModel #WGENFeedRoller = "ngModel" name="WGENFeedRoller" class="form-control" placeholder="Fees Roller"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WGENFRQuant">Quantity</label>
+                <input type="text" ngModel #WGENFRQuant = "ngModel" name="WGENFRQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ENCutterInserts">Cutter Inserts</label>
+                <input type="text" ngModel #ENCutterInserts = "ngModel" name="ENCutterInserts" class="form-control" placeholder="Cutter Inserts"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ENCIQuant">Quantity</label>
+                <input type="text" ngModel #ENCIQuant = "ngModel" name="ENCIQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ENCoilingMandrel">Coiling Mandrel</label>
+                <input type="text" ngModel #ENCoilingMandrel = "ngModel" name="ENCoilingMandrel" class="form-control"
+                    placeholder="Coiling Mandrel"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ENCMQuant">Quantity</label>
+                <input type="number" ngModel #ENCMQuant = "ngModel" name="ENCMQuant" class="form-control"
+                    placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4 style="text-align: center;">WTH, Germany</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WTHGWireGuide">Wire Guide</label>
+                <input type="text" ngModel #WTHGWireGuide = "ngModel" name="WTHGWireGuide" class="form-control" placeholder="Wire Guide"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="WTHGWGQuant">Quantity</label>
+                <input type="text" ngModel #WTHGWGQuant = "ngModel" name="WTHGWGQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="CoilingPin">Coiling Pin</label>
+                <input type="text" ngModel #CoilingPin = "ngModel" name="CoilingPin" class="form-control" placeholder="Coiling Pin"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+    <h4 style="text-align: center;">Kaivalya Engineering Bhosari, Pune</h4>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPCuttingKnifel">Cutting Knife</label>
+                <input type="text" ngModel #KEBPCuttingKnifel = "ngModel" name="KEBPCuttingKnifel" class="form-control"
+                    placeholder="Cutting Knife"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="KEBPPitchTooll">Quantity</label>
+                <input type="text" ngModel #KEBPPitchTooll = "ngModel" name="KEBPPitchTooll" class="form-control" placeholder="Pitch Tool"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="temprature">Temparature</label>
+                <input type="text" ngModel #temprature = "ngModel" name="temprature" class="form-control" placeholder="Temparature"><br>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <h4>MIT Mandrel</h4>
+    <h5>Xerem, Germany</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MMXGQuant">Quantity</label>
+                <input type="text" ngModel #MMXGQuant = "ngModel" name="MMXGQuant" class="form-control" placeholder="Quantity"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MMXGLTotal">L Total</label>
+                <input type="text" ngModel #MMXGLTotal = "ngModel" name="MMXGLTotal" class="form-control" placeholder="L Total"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MMXGL1">L1</label>
+                <input type="text" ngModel #MMXGL1 = "ngModel" name="MMXGL1" class="form-control" placeholder="l1"><br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MMXGL2">L2</label>
+                <input type="text" ngModel #MMXGL2 = "ngModel" name="MMXGL2" class="form-control" placeholder="L2"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="MMXGOD1">OD1</label>
+                <input type="text" ngModel #MMXGOD1 = "ngModel" name="MMXGOD1" class="form-control" placeholder="OD1"><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="MMXGOD2">OD2</label>
+                <input type="text" ngModel #MMXGOD2 = "ngModel" name="MMXGOD2" class="form-control" placeholder="OD2"><br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="MMXGOD3">OD3</label>
+                <input type="text" ngModel #MMXGOD3 = "ngModel" name="MMXGOD3" class="form-control" placeholder="OD3"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9 col-md-6">
+        <div class="form-group">
+            <label for="upto">Valid UpTo</label>
+            <input type="datetime-local" ngModel #upto = "ngModel" name="upto" class="form-control" placeholder="Valid UpTo (in numbers)"
+                id="upto"><br>
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="result != null">
+        <strong>{{result.PartNo}} is Added.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+    <button type="button" class="btn btn-secondary" (click)="Update(AddCoilingForm)">Update</button>
+
+</form>

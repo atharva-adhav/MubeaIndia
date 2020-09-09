@@ -1,0 +1,34 @@
+<div class="list-group">
+  <a
+  routerLink="/profile"
+  routerLinkActive="active"
+  class="list-group-item list-group-item-action"
+  >User Profile</a
+  >
+  <a
+    routerLink="/search"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    >Spring Search</a
+  >
+  <a
+    routerLink="/avail"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    >Availability</a
+  >
+  <a
+    routerLink="/addnew"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    *ngIf="auth.isLoggedIn()"
+    >Add New Data / Update</a
+  >
+  <a
+    routerLink="/delete"
+    routerLinkActive="active"
+    class="list-group-item list-group-item-action"
+    *ngIf="auth.isLoggedIn()"
+    >Delete</a
+  >
+</div>
